@@ -1,5 +1,5 @@
 import { NavLink } from "@remix-run/react";
-import { Drawer, DrawerContent, DrawerFooter, DrawerTrigger } from "./drawer";
+import { Drawer, DrawerContent, DrawerTrigger } from "./drawer";
 import { MenuIcon } from "lucide-react";
 import { Button } from "./button";
 import Logo from "./logo";
@@ -10,35 +10,42 @@ const NavLinks = [
     href: "/",
   },
   {
-    title: "Link",
+    title: "You",
     href: "/",
   },
   {
-    title: "Link",
+    title: "Must",
     href: "/",
   },
   {
-    title: "Link",
+    title: "Organize!",
     href: "/",
   },
 ];
+
+// const getActiveLink = ({isActive}) => isActive ? "bg-primary text-secondary" : ""
+
+const PrimaryButton = () => <Button> Organize! </Button>
+const SecondaryButton = () => <Button variant="secondary" > Learn More </Button>
 
 const Navbar = () => {
   return (
     <div className="flex justify-end flex-grow">
     {/*Desktop Menu */}
       <div className="hidden md:block my-auto flex-grow">
-        <div className="flex items-center justify-between">
-          <div className="flex gap-8" >            
+        <div className="flex justify-between">
+          <div className="flex gap-1" >            
             {NavLinks.map((link, i) => (
               <NavLink key={i} to={link.href}>
-                {link.title}
+                <div className="text-left h-full mx-4 py-2">
+                  {link.title}
+                </div>
               </NavLink>
             ))}
           </div>
           <div className="flex gap-4" >
-            <Button> Primary </Button>
-            <Button variant={"secondary"}> Secondary </Button>
+            <PrimaryButton />
+            <SecondaryButton />
           </div>
         </div>
       </div>
@@ -50,15 +57,17 @@ const Navbar = () => {
             <MenuIcon />
           </DrawerTrigger>
 
-          <DrawerContent className="flex flex-col gap-8 p-8">
+          <DrawerContent className="flex flex-col gap-8 p-8 overflow-y-auto">
             <Logo />
             {NavLinks.map((link, i) => (
               <NavLink key={i} to={link.href}>
-                {link.title}
+                <div className="text-left h-full mx-4 py-2">
+                  {link.title}
+                </div>
               </NavLink>
             ))}
-            <Button> Primary </Button>
-            <Button variant={"secondary"}> Secondary </Button>
+            <PrimaryButton />
+            <SecondaryButton />
           </DrawerContent>
         </Drawer>
       </div>

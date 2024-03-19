@@ -67,8 +67,19 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "loop-scroll-left": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+        "loop-scroll-right": {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(0)" },
+          
+        },
       },
       animation: {
+        "loop-scroll-left": "loop-scroll-left 30s linear infinite",
+        "loop-scroll-right": "loop-scroll-right 30s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
