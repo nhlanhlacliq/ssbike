@@ -1,10 +1,15 @@
+import { cn } from "~/lib/utils"
 import { Card } from "./card"
 import { Skeleton } from "./skeleton"
 
-const ImageSkeleton = () => {
+type Props = {
+  className: string
+}
+
+const ImageSkeleton = ({className}: Props) => {
   return (
-    <Card className={`p-2 justify-between flex-shrink-0 w-60 h-40 md:w-80 md:h-60 rounded-none border-0`}>
-      <Skeleton className="h-full w-full"/>
+    <Card className={cn('shadow-none flex-shrink-0 rounded-none border-0', className)}>
+      <Skeleton className="h-full w-full rounded-none"/>
     </Card>
   )
 }

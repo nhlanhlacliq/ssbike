@@ -10,6 +10,7 @@ import image5 from "~/assets/images/5.jpeg";
 import image6 from "~/assets/images/6.jpeg";
 import image7 from "~/assets/images/7.jpeg";
 import image8 from "~/assets/images/8.jpeg";
+import Section from "./ui/section";
 
 const imagesList = [
   image1,
@@ -27,7 +28,7 @@ const Hero = () => {
   const rightScroller = "flex gap-4 pr-4 flicker animate-loop-scroll-right group-active:paused md:group-hover:paused"
 
   return (
-    <main>
+    <Section>
       <Container className="mt-14 flex flex-col items-center">
         <h1 className="text-center text-balance">
           Unleash Your Inner Adventurer on the Trails
@@ -47,12 +48,12 @@ const Hero = () => {
         <div className="flex flicker-wrapper group">
           <div className={leftScroller}>
             {imagesList.slice(0,4).map((image, i) => (
-                <ImageCard key={i} src={image} />
+                <ImageCard className="w-60 h-40 md:w-80 md:h-60" key={i} src={image} />
                 ))}
           </div>
           <div className={leftScroller}>
               {imagesList.slice(0,4).map((image, i) => (
-                <ImageCard key={i} src={image} />
+                <ImageCard className="w-60 h-40 md:w-80 md:h-60" key={i} src={image} />
                 ))}
           </div>
         </div>
@@ -60,17 +61,17 @@ const Hero = () => {
         <div className="flex flicker-wrapper group">
           <div className={rightScroller}>
               {imagesList.slice(4).map((image, i) => (
-                <ImageCard key={i} src={image} />
+                <ImageCard className="w-60 h-40 md:w-80 md:h-60" key={i} src={image} />
                 ))}
           </div>
           <div className={rightScroller}>
               {imagesList.slice(4).map((image, i) => (
-                <ImageCard key={i} src={image} />
+                <ImageCard className="w-60 h-40 md:w-80 md:h-60" key={i} src={image} />
                 ))}
           </div>
         </div>
       </Container>
-    </main>
+    </Section>
   );
 };
 

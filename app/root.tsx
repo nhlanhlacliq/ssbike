@@ -9,6 +9,7 @@ import {
 import { LinksFunction } from "@remix-run/server-runtime";
 
 import styles from "./tailwind.css?url"
+import { ThemeProvider } from "./components/theme-provider";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
@@ -23,7 +24,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body >
+      <body className="">
         {children}
         <LiveReload />
         <ScrollRestoration />
@@ -34,5 +35,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <Outlet />
+    </ThemeProvider>
+  );
 }

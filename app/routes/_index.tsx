@@ -1,4 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
+import Benefits from "~/components/benefits";
+import BlogList from "~/components/bloglist";
+import CTA from "~/components/cta";
 import Feature from "~/components/feature";
 import Header from "~/components/header";
 import Hero from "~/components/hero";
@@ -16,6 +19,9 @@ export default function Index() {
       <Header/>
       <Hero/>
       <Feature/>
+      <BlogList/>
+      <Benefits/>
+      <CTA/>
     </>
     );
 }

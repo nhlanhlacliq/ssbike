@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { Card } from "./card";
 import ImageSkeleton from "./imageSkeleton";
+import { cn } from "~/lib/utils";
 
 // import { Image } from "canvas";
 
 type Props = {
   src: string;
+  className: string;
+  children?: React.ReactNode;
 };
 
-const ImageCard = ({ src }: Props) => {
+const ImageCard = ({ src, className, children, ...props }: Props) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -25,6 +28,11 @@ const ImageCard = ({ src }: Props) => {
     "bg-[url(/app/assets/images/10.jpeg)]",
     "bg-[url(/app/assets/images/11.jpeg)]",
     "bg-[url(/app/assets/images/12.jpeg)]",
+    "bg-[url(/app/assets/images/trails.jpeg)]",
+    "bg-[url(/app/assets/images/fixing.jpeg)]",
+    "bg-[url(/app/assets/images/bike.jpeg)]",
+    "bg-[url(/app/assets/images/woods.jpeg)]",
+    "bg-[url(/app/assets/images/group2.jpeg)]",
   ];
 
   return (
@@ -32,10 +40,13 @@ const ImageCard = ({ src }: Props) => {
       <img src={src} alt="" onLoad={() => setImageLoaded(true)} className="hidden"/>
       {imageLoaded ? (
       <Card
-        className={`flex-shrink-0 w-60 h-40 md:w-80 md:h-60 rounded-none border-0 bg-[url(${src})] bg-cover bg-center flicker-child`}
-      ></Card>
+        className={cn(`flex-shrink-0 rounded-none border-0 bg-[url(${src})] bg-cover bg-center flicker-child`, className)}
+        {...props}
+      >
+        {children}
+      </Card>
       ) : (
-      <ImageSkeleton />
+      <ImageSkeleton className={className} />
       )}
     </>
   );
