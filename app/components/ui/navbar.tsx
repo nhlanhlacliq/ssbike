@@ -3,6 +3,7 @@ import { Drawer, DrawerContent, DrawerTrigger } from "./drawer";
 import { MenuIcon } from "lucide-react";
 import { Button } from "./button";
 import Logo from "./logo";
+import { ModeToggle } from "../mode-toggle";
 
 const NavLinks = [
   {
@@ -44,6 +45,7 @@ const Navbar = () => {
             ))}
           </div>
           <div className="flex gap-4" >
+            <ModeToggle/>
             <PrimaryButton />
             <SecondaryButton />
           </div>
@@ -51,7 +53,8 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className="md:hidden my-auto pt-1">
+      <div className="md:hidden flex gap-4 my-auto pt-1">
+        <ModeToggle/>
         <Drawer direction="right">
           <DrawerTrigger>
             <MenuIcon />
