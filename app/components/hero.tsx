@@ -13,14 +13,38 @@ import image8 from "~/assets/images/8.jpeg";
 import Section from "./ui/section";
 
 const imagesList = [
-  image1,
-  image9,
-  image3,
-  image4,
-  image5,
-  image6,
-  image7,
-  image8,
+  {
+    src: image1,
+    name: "1"
+  },
+  {
+    src: image9,
+    name: "9"
+  },
+  {
+    src: image3,
+    name: "3"
+  },
+  {
+    src: image4,
+    name: "4"
+  },
+  {
+    src: image5,
+    name: "5"
+  },
+  {
+    src: image6,
+    name: "6"
+  },
+  {
+    src: image7,
+    name: "7"
+  },
+  {
+    src: image8,
+    name: "8"
+  },
 ];
 
 const Hero = () => {
@@ -47,12 +71,12 @@ const Hero = () => {
         <div className="flex flicker-wrapper group">
           <div className={leftScroller}>
             {imagesList.slice(0,4).map((image, i) => (
-                <ImageCard className=" w-60 h-40 md:w-80 md:h-60" key={i} src={image} />
+                <ImageCard className=" w-60 h-40 md:w-80 md:h-60" key={i} src={image.src} name={image.name} />
                 ))}
           </div>
           <div className={leftScroller}>
               {imagesList.slice(0,4).map((image, i) => (
-                <ImageCard className="w-60 h-40 md:w-80 md:h-60" key={i} src={image} />
+                <ImageCard className="w-60 h-40 md:w-80 md:h-60" key={i} src={image.src} name={image.name} />
                 ))}
           </div>
         </div>
@@ -60,12 +84,12 @@ const Hero = () => {
         <div className="flex flicker-wrapper group">
           <div className={rightScroller}>
               {imagesList.slice(4).map((image, i) => (
-                <ImageCard className="w-60 h-40 md:w-80 md:h-60" key={i} src={image} />
+                <ImageCard className="w-60 h-40 md:w-80 md:h-60" key={i} src={image.src} name={image.name} />
                 ))}
           </div>
           <div className={rightScroller}>
               {imagesList.slice(4).map((image, i) => (
-                <ImageCard className="w-60 h-40 md:w-80 md:h-60" key={i} src={image} />
+                <ImageCard className="w-60 h-40 md:w-80 md:h-60" key={i} src={image.src} name={image.name} />
                 ))}
           </div>
         </div>

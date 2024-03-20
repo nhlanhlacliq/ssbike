@@ -7,13 +7,13 @@ import { cn } from "~/lib/utils";
 
 type Props = {
   src: string;
+  name: string;
   className: string;
   children?: React.ReactNode;
 };
 
-const ImageCard = ({ src, className, children, ...props }: Props) => {
+const ImageCard = ({ src, name, className, children, ...props }: Props) => {
   const [imageLoaded, setImageLoaded] = useState(false);
-  const image = src.split('/').pop()?.split('.')[0];
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const possibleImages = [
@@ -41,7 +41,7 @@ const ImageCard = ({ src, className, children, ...props }: Props) => {
       <img src={src} alt="" onLoad={() => setImageLoaded(true)} className="hidden"/>
       {imageLoaded ? (
       <Card
-        className={cn(`bg-${image} flex-shrink-0 rounded-none border-0 bg-cover bg-center flicker-child`, className)}
+        className={cn(`bg-${name} flex-shrink-0 rounded-none border-0 bg-cover bg-center flicker-child`, className)}
         {...props}
       >
         {children}

@@ -17,7 +17,10 @@ const BlogList = () => {
 
   const blogs = [
     {
-      image: trails,
+      image: {
+        src: trails,
+        name: "trails"
+      },
       title: "Conquer the trails with confidence",
       description: "Learn about the best gear, trails, and techniques for mountain biking",
       category: "Riding",
@@ -29,7 +32,10 @@ const BlogList = () => {
       length: "5min read",
     },
     {
-      image: bike,
+      image: {
+        src: bike,
+        name: "bike"
+      },
       title: "The new buyer's guide to the mountain biking",
       description: "Get expert tips and tricks to sail through your first mountain bike purchase.",
       category: "Mountain Bike",
@@ -41,7 +47,10 @@ const BlogList = () => {
       length: "7min read",
     },
     {
-      image: fixing,
+      image: {
+        src: fixing,
+        name: "fixing"
+      },
       title: "Bike repair & maintenance: It's crucial",
       description: "Learn how to organise! Essential repair and maintenance procedures. You must organise!",
       category: "Maintenance",

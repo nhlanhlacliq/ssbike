@@ -2,7 +2,10 @@ import { Card } from "./card";
 
 type Props = {
   blog: {
-    image: string;
+    image: {
+      src: string;
+      name: string;
+    };
     category: string, 
     title: string, 
     description: string, 
@@ -25,7 +28,7 @@ import ImageCard from "./imageCard";
 const BlogCard = ({blog}: Props) => {
   return (
     <Card className="shadow-none flex flex-col -gap-1  border-0 py-4" >
-      <ImageCard className="w-full h-60" src={blog.image}/>
+      <ImageCard className="w-full h-60" src={blog.image.name} name={blog.image.name} />
       <TypographyMuted className="dark:text-accent-foreground">
         {blog.category}
       </TypographyMuted>

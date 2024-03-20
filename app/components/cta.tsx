@@ -9,7 +9,7 @@ function CTA() {
   return (
     <Section>
       <Container>
-        <ImageCard src={image} className='w-full h-96 sm:h-72 bg-blend-soft-light'>
+        <ImageCard src={image} name={"12"} className='w-full h-96 sm:h-72 bg-blend-soft-light'>
           <Container className='text-white mx-0 py-auto flex-col h-full justify-center p-4 md:p-8 backdrop-blur-[6px] bg-black/25'>
             <h1 className=' text-balance' >Stay Updated with Our Adventures</h1>
             <p className='text-balance' >

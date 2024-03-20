@@ -39,7 +39,7 @@ const Feature = () => {
           </Container>
         </Container>
         <Container className="mb-8 sm:mt-4 md:my-8 md:basis-1/2">
-          <ImageCard src={image2} className="w-full h-80 md:h-full" />
+          <ImageCard src={image2} name={"2"} className="w-full h-80 md:h-full" />
         </Container>
       </Container>
     </Section>
