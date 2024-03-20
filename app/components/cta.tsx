@@ -10,7 +10,7 @@ function CTA() {
     <Section>
       <Container>
         <ImageCard src={woods} className='w-full h-96 sm:h-72 bg-primary/5 bg-blend-soft-light'>
-          <Container className='text-white mx-0 py-auto flex-col h-full justify-center p-8 backdrop-blur-[6px]'>
+          <Container className='text-white mx-0 py-auto flex-col h-full justify-center p-4 md:p-8 backdrop-blur-[6px]'>
             <h1 className=' text-balance' >Stay Updated with Our Adventures</h1>
             <p className='text-balance' >
               Subscribe to receive weekly updates on our exciting mountain biking adventures.

@@ -5,24 +5,7 @@ import { Button } from "./button";
 import Logo from "./logo";
 import { ModeToggle } from "../mode-toggle";
 
-const NavLinks = [
-  {
-    title: "Home",
-    href: "/",
-  },
-  {
-    title: "You",
-    href: "/",
-  },
-  {
-    title: "Must",
-    href: "/",
-  },
-  {
-    title: "Organize!",
-    href: "/",
-  },
-];
+import { NavLinks } from "~/config/config";
 
 // const getActiveLink = ({isActive}) => isActive ? "bg-primary text-secondary" : ""
 

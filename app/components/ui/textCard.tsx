@@ -17,7 +17,7 @@ const TextCard = ({ title, content, variant, ...props }: Props) => {
         )}
       </CardTitle>
       <CardContent className="px-0">
-        <p className="text-pretty sm:pr-1">{content}</p>
+        <p className="text-balance sm:pr-1">{content}</p>
       </CardContent>
     </Card>
   );

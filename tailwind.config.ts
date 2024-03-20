@@ -80,6 +80,8 @@ const config = {
       animation: {
         "loop-scroll-left": "loop-scroll-left 30s linear infinite",
         "loop-scroll-right": "loop-scroll-right 30s linear infinite",
+        "loop-scroll-left-slow": "loop-scroll-left 60s linear infinite",
+        "loop-scroll-right-slow": "loop-scroll-right 60s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

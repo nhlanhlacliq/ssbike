@@ -3,13 +3,15 @@ import Benefits from "~/components/benefits";
 import BlogList from "~/components/bloglist";
 import CTA from "~/components/cta";
 import Feature from "~/components/feature";
+import Footer from "~/components/footer";
 import Header from "~/components/header";
 import Hero from "~/components/hero";
+import Members from "~/components/members";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Studio Street" },
+    { name: "description", content: "You Must Organise!" },
   ];
 };
 
@@ -20,8 +22,10 @@ export default function Index() {
       <Hero/>
       <Feature/>
       <BlogList/>
-      <Benefits/>
       <CTA/>
+      <Benefits/>
+      <Members/>
+      <Footer/>
     </>
     );
 }

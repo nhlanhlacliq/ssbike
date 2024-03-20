@@ -31,7 +31,7 @@ const Hero = () => {
     <Section>
       <Container className="mt-14 flex flex-col items-center">
         <h1 className="text-center text-balance">
-          Unleash Your Inner Adventurer on the Trails
+          Unleash Your Inner <span className="dark:text-accent-foreground" >Adventurer</span> on the Trails
         </h1>
         <p className="mx-0 text-center text-pretty">
           Embark on thrilling mountain biking adventures and explore
@@ -44,7 +44,6 @@ const Hero = () => {
       </Container>
 
       <Container className="mx-0 mt-8 mb-14 gap-4 flex-col overflow-hidden flicker-wrapper no-highlights">
-        
         <div className="flex flicker-wrapper group">
           <div className={leftScroller}>
             {imagesList.slice(0,4).map((image, i) => (

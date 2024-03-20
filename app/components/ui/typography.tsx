@@ -6,7 +6,7 @@ type Props = {
 }
 
 export function TypographyLead({children}: Props) {
-  return <p className="text-xl text-muted-foreground mb-2">{children}</p>;
+  return <p className="text-xl text-muted-foreground dark:text-accent-foreground mb-2">{children}</p>;
 }
 
 export function TypographyLarge({children}: Props) {
