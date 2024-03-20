@@ -8,6 +8,8 @@ import {
 } from "@remix-run/react";
 import { LinksFunction } from "@remix-run/server-runtime";
 
+import { SpeedInsights } from "@vercel/speed-insights/remix"
+
 import styles from "./tailwind.css?url"
 import { ThemeProvider } from "./components/theme-provider";
 
@@ -27,6 +29,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body className="">
         {children}
         <LiveReload />
+        <SpeedInsights />
         <ScrollRestoration />
         <Scripts />
       </body>
