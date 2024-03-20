@@ -31,7 +31,7 @@ const BlogList = () => {
     {
       image: bike,
       title: "The new buyer's guide to the mountain biking",
-      description: "Get exeprt tips and tricks to sail through your first mountain bike purchase.",
+      description: "Get expert tips and tricks to sail through your first mountain bike purchase.",
       category: "Mountain Bike",
       author: {
         name: "Thami",
